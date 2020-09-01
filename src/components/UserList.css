@@ -1,0 +1,22 @@
+.user-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 39rem;
+    border-radius: 20px;
+    background: linear-gradient(225deg, #141313, #181616);
+    box-shadow:  -8px 8px 22px #0e0d0d, 
+             8px -8px 22px #1e1d1d;
+}
+
+.user-list h2 {
+    margin-top: 0;
+    font-style: italic;
+    text-transform: uppercase;
+    background-color: #4a5459;
+    padding: 0.5rem 11.31rem 0.8rem 11.31rem;
+
+    border-radius: 20px 20px 0 0 ;
+
+}

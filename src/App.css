@@ -1,8 +1,374 @@
 /* Daca vrem ca aplicatia sa ocupe intreg viewport-ul. */
 .app {
-  min-height: 100vh;
+  min-height: 110vh;
 }
 
-.app h1 {
-  margin-top: 0;
+.app header h1 {
+  margin: 1rem 0 1rem 5.5rem;
+  color: white;
+  text-shadow: 3px 3px #000000;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.app header button{
+  font-size: 1.4rem;
+  height: 2.8rem;
+  width: 8rem;
+  margin: 0.9rem 5rem 1.1rem 0;
+
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: aliceblue;
+  background-color: #77867F;
+  border: none;
+  border-radius: 30px;
+  box-shadow:  0 6px #999,
+            -1px 10px 12px #1d1d1d, 
+             1px -1px 12px #3f3f3f;
+
+}
+
+.app header button::before {
+  content: 'Setari ' ;
+}
+
+.app header button:hover {
+  background-color: #545f5a;
+  transform: translateY(3px);
+}
+
+.app header button:active {
+
+  transform: translateY(6px);
+  box-shadow: 0 5px #666;
+}
+
+
+
+.app header {
+  background-color: #0FA3B1;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.app .header-set {
+  position: absolute;
+  right: 230px;
+  top: 5px;
+  height: 150px;
+  width: 260px;
+
+  grid-template-columns: 160px 70px;
+  grid-template-rows: 70px 70px;
+  gap: 6px 6px;
+  place-items: center center;
+  place-content: center center;
+
+  border: 3px solid black;
+  border-radius: 30px;
+
+  background-color: #393D3F;
+  color: beige;
+
+  z-index:1;
+}
+
+.app .header-set::before {
+  content: '';
+  border:13px solid black;
+  border-color: transparent transparent transparent black ;
+  position: absolute;
+  top: 20px;
+  right: -28px;
+
+
+}
+
+.app .header-set p {
+  text-align: center;
+  
+  text-transform: uppercase;
+  
+}
+
+.app section{
+  margin-top: 5.5rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.app .user-post-container {
+  position: relative;
+}
+
+.app .btn-display {
+  position: absolute;
+  top: -72px;
+  left: 200px;
+  width: 14rem;
+  height: 3.5rem;
+  font-size: 1.4rem;
+  border: 4px solid white;
+  background: transparent;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.app .btn-display:hover {
+  background: white;
+  border: 2px solid black;
+  color: black;
+  transition: ease-in-out 0.8s;
+  text-shadow: none;
+}
+
+.app .btn-display::after {
+  content: '  \00bb';
+}
+
+@media (max-width:1100px) {
+  .app section{
+    margin-top: 5.5rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .user-add-form {
+    margin-top: 3rem;
+  }
+
+  .app section{
+    margin-top:6.5rem;
+  }
+
+  .app .btn-display {
+    position: absolute;
+    top: -76px;
+    left: 200px;
+  }
+
+  .app header button{
+    margin: 0.8rem 2rem 1.1rem 2.5rem;
+  
+  }
+
+  .app .header-set {
+    position: absolute;
+    right: 175px;
+    top: 5px;
+    height: 150px;
+    width: 260px;
+    z-index:1;
+
+  }
+}
+
+@media (max-width:660px) {
+
+  
+  .app header h1 {
+    margin: 1rem 0 1rem 2.4rem;
+    text-shadow: 3px 3px #000000;
+    font-size: 1.8rem;
+  }
+
+  .user-list {
+    max-width:24.5rem;
+  }
+
+  .user-list h2 {
+    padding: 0.5rem 4.02rem 0.8rem 4.02rem;
+  }
+
+  .app .btn-display {
+    position: absolute;
+    top: -72px;
+    left: 95px;
+    width: 12rem;
+    height: 3.2rem;
+    font-size: 1.1rem;
+  }
+
+  .user-item {
+    width: 90%;
+  }
+
+  .user-item .user-item-media img {
+    width: 110px;
+    border-radius: 100px;
+  }
+
+  .user-item .user-item-media button {
+    font-size: 1.7rem;
+    right: -30px;
+    top: -9px;
+}
+
+  .app header button{
+    font-size: 1.4rem;
+    height: 2.7rem;
+    width: 4rem;
+    margin: 2rem 2rem 1.1rem 2.5rem;
+
+  }
+
+  .app header button::before {
+    content: '' ;
+  }
+
+  .app .header-set {
+    position: absolute;
+    right: 18px;
+    top: 97px;
+
+    height: 115px;
+    width: 245px;
+  
+    grid-template-columns: 160px 70px;
+    grid-template-rows: 55px 55px;
+    gap: 1px 3px;
+    z-index:1;
+
+  }
+  
+  .app .header-set::before {
+    content: '';
+    border:13px solid black;
+    border-color: transparent transparent black transparent;
+    position: absolute;
+    top: -28px;
+    right: 21px;
+  
+  
+  }
+
+  .post-list {
+    max-width:24.5rem;
+}
+
+  .app .post-list h2 {
+    padding: 0.5rem 9.18rem 0.8rem 9.18rem;
+  }
+
+
+}
+
+
+@media (max-width:420px) {
+
+
+  .app header h1 {
+    margin: 1rem 0 1rem 2rem;
+    text-shadow: 3.2px 3.2px #000000;
+    font-size: 1.5rem;
+  }
+  
+  .app header button{
+    font-size: 1.4rem;
+    height: 2.7rem;
+    width: 4rem;
+    margin: 1.2rem 1.6rem 1rem 2.5rem;
+
+  }
+
+  .app .header-set {
+    position: absolute;
+    right: 12px;
+    top: 90px;
+
+    height: 115px;
+    width: 245px;
+    z-index:1;
+  }
+  
+  .app .header-set::before {
+    top: -28px;
+    right: 24px;
+  }
+
+  
+  .user-list {
+    max-width:18rem;
+  }
+
+  .user-list h2 {
+    font-size: 1.4rem;
+    padding: 0.5rem 1.36rem 0.8rem 1.36rem;
+  }
+
+  .app .btn-display {
+    position: absolute;
+    top: -72px;
+    left: 48px;
+    width: 12rem;
+    height: 3.2rem;
+    font-size: 1.1rem;
+  }
+
+  
+  .user-item {
+    width: 96%;
+    font-size: 0.82rem;
+  }
+
+  .user-item .user-item-media img {
+    width: 90px;
+    border-radius: 100px;
+  }
+
+  .user-item .user-item-media button {
+    font-size: 1.7rem;
+    right: -21px;
+    top: -12px;
+}
+
+/* form */
+
+form h2 {
+  padding: 0.5rem 1.58rem 0.8rem 1.58rem;
+  font-size: 1.3rem;
+}
+
+.user-add-form {
+  width: 17rem;
+  height: 27.5rem;
+  margin-top: 2.2rem;
+}
+
+.user-add-form .input-text {
+  width: 14rem;
+  margin: 1rem 0;
+}
+
+.user-add-form .checkbox-input{
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.user-add-form .submit-form {
+  background-color: rgb(134, 134, 134);
+  color: honeydew;
+  width: 8.7rem;
+  height: 2.8rem;
+}
+
+.post-list {
+  max-width:18rem;
+}
+
+.app .post-list h2 {
+  padding: 0.5rem 5.9rem 0.8rem 5.9rem;
+}
+
+
 }

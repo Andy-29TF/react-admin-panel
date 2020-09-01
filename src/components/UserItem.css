@@ -1,0 +1,38 @@
+.user-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.6rem 0;
+}
+
+.user-item .p-golden {
+    color: #D4AF37
+}
+
+.user-item .user-item-media img {
+    width: 150px;
+    border-radius: 100px;
+}
+
+.user-item .user-item-media  {
+    position: relative;
+}
+.user-item .user-item-media button {
+    position: absolute;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: red;
+    font-size: 2rem;
+    right: -55px;
+    top: -10px;
+}
+
+.user-item .user-item-media button:hover {
+    color:white;
+    background: red;
+    border-radius: 30px;
+    width: 40px;
+}
