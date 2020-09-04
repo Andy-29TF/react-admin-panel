@@ -186,10 +186,6 @@
     max-width:24.5rem;
   }
 
-  .user-list h2 {
-    padding: 0.5rem 4.02rem 0.8rem 4.02rem;
-  }
-
   .app .btn-display {
     position: absolute;
     top: -72px;
@@ -256,10 +252,6 @@
     max-width:24.5rem;
 }
 
-  .app .post-list h2 {
-    padding: 0.5rem 9.18rem 0.8rem 9.18rem;
-  }
-
 
 }
 
@@ -301,11 +293,6 @@
     max-width:18rem;
   }
 
-  .user-list h2 {
-    font-size: 1.4rem;
-    padding: 0.5rem 1.36rem 0.8rem 1.36rem;
-  }
-
   .app .btn-display {
     position: absolute;
     top: -72px;
@@ -334,11 +321,6 @@
 
 /* form */
 
-form h2 {
-  padding: 0.5rem 1.58rem 0.8rem 1.58rem;
-  font-size: 1.3rem;
-}
-
 .user-add-form {
   width: 17rem;
   height: 27.5rem;
@@ -364,10 +346,6 @@ form h2 {
 
 .post-list {
   max-width:18rem;
-}
-
-.app .post-list h2 {
-  padding: 0.5rem 5.9rem 0.8rem 5.9rem;
 }
 
 

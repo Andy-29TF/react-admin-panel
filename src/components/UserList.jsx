@@ -9,10 +9,6 @@ class UserList extends React.Component {
         this.state = {};
     }
 
-    deleteUser(event) {
-        this.props.updateDeleteUsers(event)
-    }
-
     render() {
         const { users } = this.props;
 
@@ -28,7 +24,7 @@ class UserList extends React.Component {
                         salary={ user.salary }
                         avatar={ user.avatar }
                         key={ user.id }
-                        deleteUser={(event) => {this.deleteUser(event)}}
+                        deleteUsers={this.props.deleteUsers}
                     />
                     )
                 })}

@@ -12,7 +12,7 @@ class App extends React.Component {
       textColor: 'white',
       users: [],
       posts: [],
-      display: true,
+      displayUsersOrPosts: true,
       displayHeaderSet: 'none' 
     };
   }
@@ -89,11 +89,10 @@ class App extends React.Component {
     });
   }
 
-  updateDeleteUsers(event) {
-          const valueFromDeleteBtn = Number(event.target.value);
-          const newUsers = this.state.users.filter( elem => elem.id !== valueFromDeleteBtn );
+  deleteUsers(id) {
+          const newUsers = this.state.users.filter( elem => elem.id !== id );
           
-          this.setState({users: newUsers})
+          this.setState({users: newUsers});
 
   }
 
@@ -113,7 +112,7 @@ class App extends React.Component {
             <input id="changeBackgroundColor" type="color" onChange={(event) => this.changeBackgroundColor(event)}/>
             
             <p>Schimba culoarea textului</p>
-            <input id="changeTextColor" type="color" onChange={(event => {this.changeTextColor(event)})}/>
+            <input id="changeTextColor" type="color" onChange={(event) => this.changeTextColor(event)}/>
           </div>
         </header>
        
@@ -122,13 +121,13 @@ class App extends React.Component {
         
         <div className="user-post-container">
           {
-            this.state.display
-              ?<button className="btn-display" onClick={(event) => {this.setState({display: false})}} ><span></span>Afiseaza postari</button>
-              :<button className="btn-display" onClick={(event) => {this.setState({display: true})}} ><span></span>Afiseaza useri</button>
+            this.state.displayUsersOrPosts
+              ?<button className="btn-display" onClick={(event) => {this.setState({displayUsersOrPosts: false})}} ><span></span>Afiseaza postari</button>
+              :<button className="btn-display" onClick={(event) => {this.setState({displayUsersOrPosts: true})}} ><span></span>Afiseaza useri</button>
           }
           {
-            this.state.display
-              ?<UserList users={this.state.users} updateDeleteUsers={(event => this.updateDeleteUsers(event))}/>
+            this.state.displayUsersOrPosts
+              ?<UserList users={this.state.users} deleteUsers={(id) => {this.deleteUsers(id)}} />
               :<PostList posts={ this.state.posts}/>
           }
 

@@ -2,8 +2,7 @@ import React from 'react';
 import './UserItem.css';
 
 function UserItem(props) {
-    const {name, email, isGoldClient, salary, avatar, deleteUser, id} = props;
-
+    const {name, email, isGoldClient, salary, avatar, deleteUsers, id} = props;
 
     return (
         <div className="user-item">
@@ -18,7 +17,7 @@ function UserItem(props) {
             </div>
             <div className="user-item-media">
                 <img src={ avatar } alt="avatar"/>
-                <button value={id} onClick={(event) => deleteUser(event)}>&#10539;</button>
+                <button onClick={() => {deleteUsers(id)}} >&#10539;</button>
             </div>
         </div>
     );
